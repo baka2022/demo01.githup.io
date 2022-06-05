@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>每日一言</title>
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+	<button id="btn">每日一言</button>
+</body>
+
+<script>
+    $("#btn").click(function () {
+        $.ajax({
+             url:"https://v.api.aa1.cn/api/tiangou/s",
+             type:"get",
+             dataType:"jsonp",     // 伪造ajax  基于script
+             jsonp: 'callbacks',
+             //jsonpCallback:"alex",
+             success:function (data) {
+                 console.log(data)
+             }
+         })
+    })
+</script>
+</html>
+
+<!-- 未完成 -->

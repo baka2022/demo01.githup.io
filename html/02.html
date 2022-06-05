@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>输入qq号获取头像</title>
+	<title>输入qq号获取昵称</title>
 	<link rel="stylesheet" href="../public/layui/css/layui.css">
 </head>
 <body>
@@ -24,7 +24,7 @@
 			let qq = formData.get('qq');
 			console.log(qq);
 			// 简单的字符串拼接完成url组装
-			var url = "https://v.api.aa1.cn/api/qqimg/index.php?qq="+qq;
+			var url = "https://v.api.aa1.cn/api/qqnicheng/index.php?qq="+qq;
 			console.log(url);
 			window.open(url,'_target');
 			return false;
