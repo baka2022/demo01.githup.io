@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../public/layui/css/layui.css">
+</head>
+<body>
+
+<div class="layui-container">
+	<form class="layui-form" action="" method="get"  onsubmit="return mySubmit(this)">
+		<input class="layui-input" type="text" id="qq" name="qq" value="3253366285">
+		<br>
+		<button class="layui-btn">按我</button>
+	</form>
+</div>      
+</body>
+	<script>
+		function mySubmit(form){
+		<!--定义formData对象-->
+			let formData = new FormData(form);
+			<!--利用fromData对象的get方法获取表单数据-->
+			let qq = formData.get('qq');
+			console.log(qq);
+			var url = "https://v.api.aa1.cn/api/qqimg/index.php?qq="+qq;
+			console.log(url);
+			window.open(url,'_target');
+			return false;
+		}	
+	</script>
+</html>
